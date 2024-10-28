@@ -7,7 +7,10 @@ export const errorHandler = () => ({
     if (handler.error instanceof ValidationError) {
       handler.response = {
         statusCode: 400,
-        body: JSON.stringify({ error: handler.error.details }),
+        body: JSON.stringify({
+          message: "Corpo da requisição inválido",
+          details: handler.error.details,
+        }),
       };
     } else if (handler.error instanceof HttpError) {
       handler.response = {
