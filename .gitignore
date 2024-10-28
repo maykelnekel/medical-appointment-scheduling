@@ -1,0 +1,21 @@
+# package directories
+node_modules
+
+# Serverless directories
+.serverless
+
+.build
+
+.nyc_output
+
+coverage
+
+package-lock.json
+
+out-logger.json
+
+.DS_Store
+
+.editorconfig
+
+undefined

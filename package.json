@@ -1,0 +1,38 @@
+{
+  "name": "medical-appointment-scheduling",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "local": "cross-env NODE_ENV=dev serverless offline",
+    "local:debug": "cross-env NODE_ENV=dev serverless offline --debug",
+    "deploy": "serverless deploy",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "joi": "^17.13.3",
+    "middy": "^0.36.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "@typescript-eslint/eslint-plugin": "^8.11.0",
+    "@typescript-eslint/parser": "^8.11.0",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3",
+    "serverless-offline": "^14.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "@types/joi": "^17.2.2"
+  },
+  "keywords": [],
+  "author": "maykelnekel@gmail.com",
+  "license": "ISC",
+  "description": "A simple API to scheduling mecical appointments",
+  "repository": {
+    "url": "https://github.com/maykelnekel/medical-appointment-scheduling"
+  }
+}
