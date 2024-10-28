@@ -1,0 +1,31 @@
+service: aws-node-rest-api-typescript
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  environment:
+    NODE_ENV: prod
+
+plugins:
+  - serverless-offline
+
+package:
+  exclude:
+    - config/.env.stg
+    - config/.env.pro
+    - config/.env.dev
+
+functions:
+  getAllSchedules:
+    handler: src/schedule/handler.getAllSchedules
+    events:
+      - http:
+          path: agendas
+          method: get
+
+  createScheduling:
+    handler: src/scheduling/handler.createScheduling
+    events:
+      - http:
+          path: agendamento
+          method: post
