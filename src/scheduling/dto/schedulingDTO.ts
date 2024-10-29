@@ -20,12 +20,4 @@ export class ScheduleDTO implements iScheduling {
     this.data_horario = dateTime;
     this.paciente = pacient;
   }
-
-  getSchedulingData(): iScheduling {
-    return {
-      data_horario: this.data_horario,
-      medico: this.medico,
-      paciente: this.paciente,
-    };
-  }
 }
