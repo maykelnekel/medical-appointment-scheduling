@@ -3,35 +3,34 @@ import { CreateScheduleDTO, ScheduleDTO } from "../dto/schedulingDTO";
 import { iSchedulingResponse } from "../interface/responses";
 import { schedulings } from "../mocks/scheculings";
 import { HttpError } from "../../utils/Errors/HttpError";
+import { updateDoctorSchedule } from "../../utils/updateDoctorSchedule";
 
 export class SchedulingService {
   createScheduling(
     schedulingData: CreateScheduleDTO,
   ): iSchedulingResponse | HttpError {
-    const findDoctor = schedules.find(
-      (item) => item.id === schedulingData.medico_id,
+    const doctorIndex = schedules.findIndex(
+      (doctor) => doctor.id === schedulingData.medico_id,
     );
 
-    if (!findDoctor) {
+    if (doctorIndex === -1) {
       throw new HttpError(
         404,
         "O médico com o ID informado não foi encontrado na nossa base de dados",
       );
     }
 
-    if (
-      !findDoctor.horarios_disponiveis.includes(schedulingData.data_horario)
-    ) {
-      throw new HttpError(
-        406,
-        "O horário do agendamento não está disponível, consulte novamente a disponibilidade do médico",
-      );
+    const doctor = schedules[doctorIndex];
+
+    if (!doctor.horarios_disponiveis.includes(schedulingData.data_horario)) {
+      throw new HttpError(406, "O horário do agendamento não está disponível");
     }
 
+    updateDoctorSchedule(doctorIndex, schedulingData.data_horario);
     schedulings.push(schedulingData);
 
     const schedulingResponse = new ScheduleDTO(
-      findDoctor.nome,
+      doctor.nome,
       schedulingData.data_horario,
       schedulingData.paciente_nome,
     );
