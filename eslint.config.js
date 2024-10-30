@@ -21,6 +21,13 @@ export default [
     "plugin:prettier/recommended",
   ),
   {
+    ignores: [
+      "**/node_modules/**",
+      "**/.serverless/**",
+      "**/dist/**",
+      "**/build/**",
+    ],
+
     plugins: {
       "@typescript-eslint": typescriptEslint,
     },
