@@ -9,7 +9,6 @@ export function updateDoctorSchedule(
   const newDoctorTimes = currentSchedule.filter(
     (time) => time !== scheduleTime,
   );
-  console.log(newDoctorTimes);
   const newDoctorData: iDoctor = {
     ...schedules[doctorIndex],
     horarios_disponiveis: newDoctorTimes,
