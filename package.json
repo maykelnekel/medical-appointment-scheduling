@@ -6,7 +6,8 @@
   "scripts": {
     "local": "cross-env NODE_ENV=dev serverless offline",
     "local:debug": "cross-env NODE_ENV=dev serverless offline --debug",
-    "deploy": "serverless deploy --debug",
+    "deploy": "serverless deploy",
+    "deploy:debug": "serverless deploy --debug",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
