@@ -234,7 +234,26 @@ Caso o payload seja enviado com um campo um inválido:
     "message": "Corpo da requisição inválido",
     "details": [
       {
-        "message": "\"medico_id\" must be a number",
+        "message": "O valor precisa ser uma string",
+        "path": ["paciente_nome"],
+        "type": "string.base",
+        "context": {
+          "label": "paciente_nome",
+          "value": 1,
+          "key": "paciente_nome"
+        }
+      },
+      {
+        "message": "O campo data_horario é obrigatório",
+        "path": ["data_horario"],
+        "type": "any.required",
+        "context": {
+          "label": "data_horario",
+          "key": "data_horario"
+        }
+      },
+      {
+        "message": "O valor precisa ser um número inteiro",
         "path": ["medico_id"],
         "type": "number.base",
         "context": {
