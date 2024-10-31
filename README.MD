@@ -1,6 +1,6 @@
 # [medical-appointment-scheduling](https://blss5o1zdc.execute-api.us-east-1.amazonaws.com/dev)
 
-Essa é uma API simples para agendamento de consultas médicas, desenvolvida com o intuito de implementar funções lamdas na amazon com o auxilio do serverless framework, para realizar o desenvolvimento e deploy da API nos servidores da Amazon, de forma simples e intuitiva.
+Essa é uma API simples para agendamento de consultas médicas, desenvolvida com o intuito de implementar funções lambda na amazon com o auxilio do serverless framework, para realizar o desenvolvimento e deploy da API nos servidores da Amazon, de forma simples e intuitiva.
 
 ## Ferramentas utilizadas
 
