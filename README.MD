@@ -184,7 +184,7 @@ Caso a listagem seja executada com sucesso;
 
 #
 
-### <b style="color: yellow;">POST</b> /agendamentos
+### <b style="color: yellow;">POST</b> /agendamento
 
 Permite que o paciente marque um horário de consulta com um médico.
 
