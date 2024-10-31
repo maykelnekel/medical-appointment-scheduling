@@ -43,7 +43,7 @@
   "keywords": [],
   "author": "maykelnekel@gmail.com",
   "license": "ISC",
-  "description": "A simple API to scheduling mecical appointments",
+  "description": "Uma API simples para agendamento de consultas médicas.",
   "repository": {
     "url": "https://github.com/maykelnekel/medical-appointment-scheduling"
   }
